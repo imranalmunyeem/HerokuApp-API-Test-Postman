@@ -1,0 +1,705 @@
+{
+	"info": {
+		"_postman_id": "42092487-efbb-430e-8d15-7a7299bc5c8a",
+		"name": "Herokuapp-Restful-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Restaurant Resources",
+			"item": [
+				{
+					"name": "Get restaurant list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==200;\r",
+									"tests['Validating Response Body'] =  responseBody.has('name', 'id');\r",
+									"\r",
+									"//Data Area\r",
+									"var response = JSON.parse(responseBody);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 96c3fe710340701c311d625bd3e9142a37cda098",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/restaurants/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"restaurants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a restaurant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==201;\r",
+									"tests['Validating Response Body'] =  responseBody.has('name');\r",
+									"\r",
+									"//Data Area\r",
+									"var response = JSON.parse(responseBody);\r",
+									"tests['Validating name'] = response.name == 'el dorado';\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 96c3fe710340701c311d625bd3e9142a37cda098",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"el dorado\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/restaurants/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"restaurants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new restaurant to delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==201;\r",
+									"tests['Validating Response Body'] =  responseBody.has('name');\r",
+									"\r",
+									"//Data Area\r",
+									"var response = JSON.parse(responseBody);\r",
+									"tests['Validating name'] = response.name == 'Tokyo Cafe';\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 96c3fe710340701c311d625bd3e9142a37cda098",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Tokyo Cafe\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/restaurants/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"restaurants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Make changes to an existing restaurant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==200;\r",
+									"tests['Validating Response Body'] =  responseBody.has('name');\r",
+									"\r",
+									"//Data Area\r",
+									"var response = JSON.parse(responseBody);\r",
+									"tests['Validating name'] = response.name == 'el dorado of Spain';\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 96c3fe710340701c311d625bd3e9142a37cda098",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"el dorado of Spain\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/restaurants/3/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"restaurants",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark Restaurant as Deleted",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==404;\r",
+									"tests['Validating Response Body'] =  responseBody.has('detail');\r",
+									"\r",
+									"//Data Area\r",
+									"var response = JSON.parse(responseBody);\r",
+									"tests['Validating non-existence response'] = response.detail == 'Not found.';"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 96c3fe710340701c311d625bd3e9142a37cda098",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/restaurants/5/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"restaurants",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create user and authentication",
+			"item": [
+				{
+					"name": "Create a new user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==201;\r",
+									"tests['Validating Response Body'] =  responseBody.has('email','username','id');\r",
+									"\r",
+									"//Data Area\r",
+									"var response = JSON.parse(responseBody);\r",
+									"tests['Validating email'] = response.email == 'nigarasteakowner@mailinator.com';\r",
+									"tests['Validating username'] = response.username == 'nigarasteakowner';\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"nigarasteakowner\", \"email\": \"nigarasteakowner@mailinator.com\", \"password\": \"123!@#abc\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/auth/users/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==200;\r",
+									"tests['Validating Response Body'] =  responseBody.has('auth_token');\r",
+									"\r",
+									"//Data Area\r",
+									"var response = JSON.parse(responseBody);\r",
+									"tests['Validating Token'] = response.auth_token == '96c3fe710340701c311d625bd3e9142a37cda098';\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "96c3fe710340701c311d625bd3e9142a37cda098",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"kobesteakrestaurant\", \"email\": \"kobesteak@mailinator.com\", \"password\": \"123!@#abc\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/auth/token/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"token",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticating Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==200;\r",
+									"tests['Validating Response Body'] =  responseBody.has('email','id','username');\r",
+									"\r",
+									"//Data Area\r",
+									"var response = JSON.parse(responseBody);\r",
+									"tests['Validating email'] = response.email == 'nigarasteakowner@mailinator.com';\r",
+									"tests['Validating username'] = response.username == 'nigarasteakowner';\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 96c3fe710340701c311d625bd3e9142a37cda098"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/auth/users/me/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"users",
+								"me",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "History of Winning",
+			"item": [
+				{
+					"name": "Returns history of winning restaurants for a time period",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==200;\r",
+									"tests['Validating Response Body'] =  responseBody.has('date', 'restaurant');\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 96c3fe710340701c311d625bd3e9142a37cda098",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/polls/history/?from2022-04-27&to=2022-04-28",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"polls",
+								"history",
+								""
+							],
+							"query": [
+								{
+									"key": "from2022-04-27",
+									"value": null
+								},
+								{
+									"key": "to",
+									"value": "2022-04-28"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reset",
+			"item": [
+				{
+					"name": "Reset a specific day",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==200;\r",
+									"tests['Validating Response Body'] =  responseBody.has('ok');\r",
+									"\r",
+									"//Data Area\r",
+									"var response = JSON.parse(responseBody);\r",
+									"tests['Validating ok response'] = response.ok == true;\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 96c3fe710340701c311d625bd3e9142a37cda098",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2022-04-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/polls/reset/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"polls",
+								"reset",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Poll",
+			"item": [
+				{
+					"name": "Returns status of the today's poll",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==200;\r",
+									"tests['Validating Response Body'] =  responseBody.has('top', 'rankings', 'available votes');\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 96c3fe710340701c311d625bd3e9142a37cda098",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/polls/today/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"polls",
+								"today",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Voote with ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Headers Area\r",
+									"pm.test('Check Content-Type',()=>{\r",
+									"    pm.response.to.be.header('Content-Type','application/json');\r",
+									"});\r",
+									"\r",
+									"//Body Area\r",
+									"tests['Validating Status Code'] = responseCode.code ==400;\r",
+									"tests['Validating Response Body'] =  responseBody.has('error');\r",
+									"\r",
+									"//Data Area\r",
+									"var response = JSON.parse(responseBody);\r",
+									"tests['Validating error response'] = response.error == 'Votes per day exceeded';\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 96c3fe710340701c311d625bd3e9142a37cda098",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"restaurant_id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/polls/vote/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"polls",
+								"vote",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,600 @@
+{
+	"id": "29143de1-1ffb-4954-a62d-0c2ef8280c40",
+	"name": "Herokuapp-Restful-APIs",
+	"timestamp": "2022-04-26T19:53:43.638Z",
+	"collection_id": "15813605-42092487-efbb-430e-8d15-7a7299bc5c8a",
+	"folder_id": 0,
+	"environment_id": "15813605-71017a10-1ac9-44ac-b608-62bae8288e28",
+	"totalPass": 45,
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "eaccc256-eb08-4f42-b4aa-32c9c111d6cd",
+			"name": "Get restaurant list",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/restaurants/",
+			"time": 726,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				726
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true
+				}
+			]
+		},
+		{
+			"id": "3c62f8e6-fc54-487b-b343-7195740d8b1c",
+			"name": "Create a restaurant",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/restaurants/",
+			"time": 231,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true,
+				"Validating name": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				231
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true,
+					"Validating name": true
+				}
+			]
+		},
+		{
+			"id": "e8fab7a4-80b9-445b-a326-f5d8496b9b53",
+			"name": "Create a new restaurant to delete",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/restaurants/",
+			"time": 267,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true,
+				"Validating name": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				267
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true,
+					"Validating name": true
+				}
+			]
+		},
+		{
+			"id": "725b9c0c-c218-4eb0-a2c3-9bf1efdd13e6",
+			"name": "Make changes to an existing restaurant",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/restaurants/3/",
+			"time": 252,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true,
+				"Validating name": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				252
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true,
+					"Validating name": true
+				}
+			]
+		},
+		{
+			"id": "7427e7df-10bc-4b9c-a71a-6220b6fc6c51",
+			"name": "Mark Restaurant as Deleted",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/restaurants/5/",
+			"time": 245,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true,
+				"Validating non-existence response": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating non-existence response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				245
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true,
+					"Validating non-existence response": true
+				}
+			]
+		},
+		{
+			"id": "446e0d16-798f-4d1b-a72a-f64e797c47ca",
+			"name": "Create a new user",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/auth/users/create",
+			"time": 331,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true,
+				"Validating email": true,
+				"Validating username": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating username": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				331
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true,
+					"Validating email": true,
+					"Validating username": true
+				}
+			]
+		},
+		{
+			"id": "b5809ad0-ecff-48b5-8a80-919c95261ac9",
+			"name": "Login",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/auth/token/login",
+			"time": 376,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true,
+				"Validating Token": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Token": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				376
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true,
+					"Validating Token": true
+				}
+			]
+		},
+		{
+			"id": "1ac62f26-4c34-43a6-a9e4-9272d1ba3610",
+			"name": "Authenticating Request",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/auth/users/me/",
+			"time": 231,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true,
+				"Validating email": true,
+				"Validating username": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating username": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				231
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true,
+					"Validating email": true,
+					"Validating username": true
+				}
+			]
+		},
+		{
+			"id": "ee50adb3-8a9a-40b1-8e7e-adb279d0d0bb",
+			"name": "Returns history of winning restaurants for a time period",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/polls/history/?from2022-04-27&to=2022-04-28",
+			"time": 311,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				311
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true
+				}
+			]
+		},
+		{
+			"id": "db6b9f7d-fdef-4680-8721-75fc1ed09f26",
+			"name": "Reset a specific day",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/polls/reset/",
+			"time": 241,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true,
+				"Validating ok response": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating ok response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				241
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true,
+					"Validating ok response": true
+				}
+			]
+		},
+		{
+			"id": "c77a3a36-78ec-4928-b55e-d20cb83d13dc",
+			"name": "Returns status of the today's poll",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/polls/today/",
+			"time": 247,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				247
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true
+				}
+			]
+		},
+		{
+			"id": "da3dc1ae-d52c-40b6-a064-713aad49e5eb",
+			"name": "Voote with ID",
+			"url": "https://convious-qa-test.herokuapp.com/api/v1/polls/vote/",
+			"time": 242,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check Content-Type": true,
+				"Validating Status Code": true,
+				"Validating Response Body": true,
+				"Validating error response": true
+			},
+			"testPassFailCounts": {
+				"Check Content-Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Response Body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating error response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				242
+			],
+			"allTests": [
+				{
+					"Check Content-Type": true,
+					"Validating Status Code": true,
+					"Validating Response Body": true,
+					"Validating error response": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3700,
+	"collection": {
+		"requests": [
+			{
+				"id": "eaccc256-eb08-4f42-b4aa-32c9c111d6cd",
+				"method": "GET"
+			},
+			{
+				"id": "3c62f8e6-fc54-487b-b343-7195740d8b1c",
+				"method": "POST"
+			},
+			{
+				"id": "e8fab7a4-80b9-445b-a326-f5d8496b9b53",
+				"method": "POST"
+			},
+			{
+				"id": "725b9c0c-c218-4eb0-a2c3-9bf1efdd13e6",
+				"method": "PATCH"
+			},
+			{
+				"id": "7427e7df-10bc-4b9c-a71a-6220b6fc6c51",
+				"method": "DELETE"
+			},
+			{
+				"id": "446e0d16-798f-4d1b-a72a-f64e797c47ca",
+				"method": "POST"
+			},
+			{
+				"id": "b5809ad0-ecff-48b5-8a80-919c95261ac9",
+				"method": "POST"
+			},
+			{
+				"id": "1ac62f26-4c34-43a6-a9e4-9272d1ba3610",
+				"method": "GET"
+			},
+			{
+				"id": "ee50adb3-8a9a-40b1-8e7e-adb279d0d0bb",
+				"method": "GET"
+			},
+			{
+				"id": "db6b9f7d-fdef-4680-8721-75fc1ed09f26",
+				"method": "POST"
+			},
+			{
+				"id": "c77a3a36-78ec-4928-b55e-d20cb83d13dc",
+				"method": "GET"
+			},
+			{
+				"id": "da3dc1ae-d52c-40b6-a064-713aad49e5eb",
+				"method": "POST"
+			}
+		]
+	}
+}
